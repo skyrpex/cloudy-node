@@ -54,7 +54,7 @@
     "semver": "^7.3.7"
   },
   "engines": {
-    "node": "^14.13.1 || >=16.0.0"
+    "node": ">= 14.13.1"
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",

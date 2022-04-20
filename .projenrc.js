@@ -15,6 +15,8 @@ const project = new typescript.TypeScriptProject({
       inlineSources: false,
     },
   },
+  // Allows using "node:" protocol.
+  minNodeVersion: "14.13.1",
   prettier: true,
   releaseToNpm: true,
   npmAccess: javascript.NpmAccess.PUBLIC,
@@ -35,9 +37,6 @@ project.addFields({
       import: `./lib/index.js`,
       types: "./lib/index.d.ts",
     },
-  },
-  engines: {
-    node: "^14.13.1 || >=16.0.0",
   },
 });
 
