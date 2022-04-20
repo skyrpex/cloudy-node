@@ -11,4 +11,4 @@ export function compress(input: Input) {
 }
 
 // Use top level await to write to a file.
-await fs.writeFile("output.txt", "hello world");
+await fs.writeFile("execute.output.txt", "hello world");
