@@ -16,9 +16,9 @@ const project = new typescript.TypeScriptProject({
     },
   },
   // Allows using "node:" protocol. The minimum version that allows this is
-  // 14.13.1, but the underlying dependencies require ^14.15.0, thus breaking
-  // projen's upgrade workflow.
-  minNodeVersion: "14.15.0",
+  // 14.13.1, but the underlying dependencies and processes require more modern
+  // versions, thus breaking projen's upgrade workflow.
+  minNodeVersion: "14.18.0",
   prettier: true,
   releaseToNpm: true,
   npmAccess: javascript.NpmAccess.PUBLIC,
