@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "devDependencies": {
-    "@cloudy-ts/esm-node": "file:../.."
+    "cloudy-node": "file:../.."
   },
   "dependencies": {
     "@pulumi/pulumi": "^3.29.1"

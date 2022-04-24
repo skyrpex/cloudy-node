@@ -15,7 +15,7 @@ yarn add cloudy-node
 ## Usage
 
 ```sh
-yarn esm-node index.ts
+yarn cloudy-node index.ts
 ```
 
 Or manually:

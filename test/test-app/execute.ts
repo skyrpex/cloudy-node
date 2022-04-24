@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 
-// Some some TypeScript interfaces to make sure they are removed by esm-node.
+// Some some TypeScript interfaces to make sure they are removed by cloudy-node.
 interface Input {
   name: string;
   age: number;

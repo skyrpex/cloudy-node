@@ -7,7 +7,7 @@ test("executes the file", () => {
 
   const { status } = child_process.spawnSync(
     "yarn",
-    ["esm-node", "execute.ts"],
+    ["cloudy-node", "execute.ts"],
     {
       cwd: __dirname,
     }
