@@ -1,10 +1,8 @@
 import { typescript, javascript } from "projen";
 const project = new typescript.TypeScriptProject({
   defaultReleaseBranch: "main",
-  name: "@cloudy-ts/esm-node",
-  bin: {
-    "esm-node": "./lib/cli.js",
-  },
+  name: "cloudy-node",
+  bin: "./lib/cli.js",
   deps: ["esbuild", "semver", "node-fetch", "cross-spawn"],
   devDeps: ["@types/semver", "@types/cross-spawn"],
   tsconfig: {
@@ -43,7 +41,7 @@ project.addFields({
 });
 
 project.compileTask.prependExec(
-  "yarn link && cd ./test/test-app && yarn link @cloudy-ts/esm-node"
+  `yarn link && cd ./test/test-app && yarn link ${project.package.packageName}`
 );
 project.testTask.prependExec("cd ./test/test-app && yarn");
 
