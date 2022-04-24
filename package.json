@@ -1,7 +1,7 @@
 {
-  "name": "@cloudy-ts/esm-node",
+  "name": "cloudy-node",
   "bin": {
-    "esm-node": "./lib/cli.js"
+    "cloudy-node": "./lib/cli.js"
   },
   "scripts": {
     "build": "npx projen build",
@@ -58,9 +58,6 @@
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",
-  "publishConfig": {
-    "access": "public"
-  },
   "version": "0.0.0",
   "jest": {
     "testMatch": [

@@ -78,7 +78,7 @@
       "description": "Only compile",
       "steps": [
         {
-          "exec": "yarn link && cd ./test/test-app && yarn link @cloudy-ts/esm-node"
+          "exec": "yarn link && cd ./test/test-app && yarn link cloudy-node"
         },
         {
           "exec": "tsc --build"

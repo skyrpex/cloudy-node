@@ -1,9 +1,9 @@
 import { typescript, javascript } from "projen";
 const project = new typescript.TypeScriptProject({
   defaultReleaseBranch: "main",
-  name: "@cloudy-ts/esm-node",
+  name: "cloudy-node",
   bin: {
-    "esm-node": "./lib/cli.js",
+    "cloudy-node": "./lib/cli.js",
   },
   deps: ["esbuild", "semver", "node-fetch", "cross-spawn"],
   devDeps: ["@types/semver", "@types/cross-spawn"],
@@ -21,7 +21,6 @@ const project = new typescript.TypeScriptProject({
   minNodeVersion: "14.18.0",
   prettier: true,
   releaseToNpm: true,
-  npmAccess: javascript.NpmAccess.PUBLIC,
 });
 
 // Use ESM. See https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c#how-can-i-move-my-commonjs-project-to-esm.
@@ -43,7 +42,7 @@ project.addFields({
 });
 
 project.compileTask.prependExec(
-  "yarn link && cd ./test/test-app && yarn link @cloudy-ts/esm-node"
+  `yarn link && cd ./test/test-app && yarn link ${project.package.packageName}`
 );
 project.testTask.prependExec("cd ./test/test-app && yarn");
 
