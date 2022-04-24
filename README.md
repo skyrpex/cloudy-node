@@ -1,15 +1,15 @@
-# @cloudy-ts/esm-node
+# cloudy-node
 
 TypeScript and ESM node runtime powered by esbuild.
 
-[![NPM version](https://img.shields.io/npm/v/@cloudy-ts/esm-node/latest.svg)](https://www.npmjs.com/package/@cloudy-ts/esm-node)
-[![NPM downloads](https://img.shields.io/npm/dm/@cloudy-ts/esm-node.svg)](https://www.npmjs.com/package/@cloudy-ts/esm-node)
-[![Build status](https://img.shields.io/github/workflow/status/skyrpex/cloudy-ts-esm-node/release)](https://www.npmjs.com/package/@cloudy-ts/esm-node)
+[![NPM version](https://img.shields.io/npm/v/cloudy-node/latest.svg)](https://www.npmjs.com/package/cloudy-node)
+[![NPM downloads](https://img.shields.io/npm/dm/cloudy-node.svg)](https://www.npmjs.com/package/cloudy-node)
+[![Build status](https://img.shields.io/github/workflow/status/skyrpex/cloudy-ts-esm-node/release)](https://www.npmjs.com/package/cloudy-node)
 
 ## Installation
 
 ```sh
-yarn add @cloudy-ts/esm-node
+yarn add cloudy-node
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ yarn esm-node index.ts
 Or manually:
 
 ```sh
-node --loader @cloudy-ts/esm-node index.ts
+node --loader cloudy-node index.ts
 ```
 
 ## Motivation
