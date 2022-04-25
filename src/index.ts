@@ -41,8 +41,8 @@ function esbuildTransformSync(rawSource, filename, url, format) {
     warnings,
     map: jsSourceMap,
   } = transformSync(rawSource.toString(), {
-    // sourcefile: filename,
-    // sourcemap: 'both',
+    sourcefile: filename,
+    sourcemap: "both",
     loader: new URL(url).pathname.match(extensionsRegex)?.[1],
     // esbuild's target "node*"" emits spread helpers that are faster than the
     // native v8 spreads, but sadly they break Pulumi's function serialization.
