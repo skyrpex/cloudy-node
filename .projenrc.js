@@ -21,6 +21,8 @@ const project = new typescript.TypeScriptProject({
   minNodeVersion: "14.18.0",
   prettier: true,
   releaseToNpm: true,
+  autoApproveUpgrades: true,
+  autoApproveOptions: {},
 });
 
 // Use ESM. See https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c#how-can-i-move-my-commonjs-project-to-esm.
