@@ -1,4 +1,5 @@
-import { typescript, javascript } from "projen";
+import { typescript, github } from "projen";
+
 const project = new typescript.TypeScriptProject({
   defaultReleaseBranch: "main",
   name: "cloudy-node",
@@ -23,7 +24,10 @@ const project = new typescript.TypeScriptProject({
   releaseToNpm: true,
   autoApproveUpgrades: true,
   autoApproveOptions: {
-    secret: "PROJEN_GITHUB_TOKEN",
+    allowedUsernames: ["skyrpex", "skyrpex-bot[bot]"],
+  },
+  githubOptions: {
+    projenCredentials: github.GithubCredentials.fromApp(),
   },
 });
 
