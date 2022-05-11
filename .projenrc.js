@@ -1,4 +1,4 @@
-import { typescript, github } from "projen";
+const { typescript, github } = require("projen");
 
 const project = new typescript.TypeScriptProject({
   defaultReleaseBranch: "main",
@@ -40,7 +40,6 @@ for (const tsconfig of [project.tsconfig, project.tsconfigDev]) {
 }
 project.addDevDeps("@types/node@^14.0.0");
 project.addFields({
-  type: "module",
   exports: {
     ".": {
       import: `./lib/index.js`,
@@ -49,7 +48,7 @@ project.addFields({
   },
 });
 
-project.compileTask.prependExec(
+project.compileTask.exec(
   `yarn link && cd ./test/test-app && yarn link ${project.package.packageName}`
 );
 project.testTask.prependExec("cd ./test/test-app && yarn");

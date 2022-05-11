@@ -78,10 +78,10 @@
       "description": "Only compile",
       "steps": [
         {
-          "exec": "yarn link && cd ./test/test-app && yarn link cloudy-node"
+          "exec": "tsc --build"
         },
         {
-          "exec": "tsc --build"
+          "exec": "yarn link && cd ./test/test-app && yarn link cloudy-node"
         }
       ]
     },
