@@ -35,7 +35,7 @@ const project = new typescript.TypeScriptProject({
 for (const tsconfig of [project.tsconfig, project.tsconfigDev]) {
   tsconfig.file.addOverride("compilerOptions.lib", ["ES2020"]);
   tsconfig.file.addOverride("compilerOptions.target", "ES2020");
-  tsconfig.file.addOverride("compilerOptions.module", "ES2020");
+  tsconfig.file.addOverride("compilerOptions.module", "CommonJS");
   tsconfig.file.addOverride("compilerOptions.moduleResolution", "node");
 }
 project.addDevDeps("@types/node@^14.0.0");
