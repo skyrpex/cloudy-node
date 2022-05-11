@@ -100,7 +100,6 @@
     }
   },
   "types": "lib/index.d.ts",
-  "type": "module",
   "exports": {
     ".": {
       "import": "./lib/index.js",
